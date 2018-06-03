@@ -1,0 +1,87 @@
+﻿<Window x:Class="Battleship.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Battleship"
+        mc:Ignorable="d"
+        Title="BattleShip" Height="488.8" Width="854.355" ResizeMode="NoResize"   >
+    <Grid Margin="0,0,0.2,0.2">
+        <local:BattleField x:Name="MyField" HorizontalAlignment="Left" Margin="40,51,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelA" Content="А" HorizontalAlignment="Left" Margin="40,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelB" Content="Б" HorizontalAlignment="Left" Margin="70,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelC" Content="В" HorizontalAlignment="Left" Margin="100,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelD" Content="Г" HorizontalAlignment="Left" Margin="130,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelE" Content="Д" HorizontalAlignment="Left" Margin="160,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelF" Content="Е" HorizontalAlignment="Left" Margin="190,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelG" Content="Ж" HorizontalAlignment="Left" Margin="220,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelH" Content="З" HorizontalAlignment="Left" Margin="250,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelI" Content="И" HorizontalAlignment="Left" Margin="280,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelJ" Content="К" HorizontalAlignment="Left" Margin="310,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="1" HorizontalAlignment="Left" Margin="24,51,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="2" HorizontalAlignment="Left" Margin="24,81,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="3" HorizontalAlignment="Left" Margin="24,111,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="4" HorizontalAlignment="Left" Margin="24,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="5" HorizontalAlignment="Left" Margin="24,171,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="6" HorizontalAlignment="Left" Margin="24,201,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="7" HorizontalAlignment="Left" Margin="24,231,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label8" Content="8" HorizontalAlignment="Left" Margin="24,261,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9" Content="9" HorizontalAlignment="Left" Margin="24,291,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label10" Content="10" HorizontalAlignment="Left" Margin="22,321,0,0" VerticalAlignment="Top"/>
+
+        <GroupBox x:Name="Group1" Header="Тип коробля" HorizontalAlignment="Left" Height="97" Margin="353,157,0,0" VerticalAlignment="Top" Width="113">
+            <StackPanel>
+                <RadioButton x:Name="radioButton1" Content="1" HorizontalAlignment="Left" Margin="0,10,0,0"  Click="radioButton1_Click" IsChecked="True"/>
+                <RadioButton x:Name="radioButton2" Content="2" HorizontalAlignment="Left" Margin="0,0,0,0"  Click="radioButton1_Click"/>
+                <RadioButton x:Name="radioButton3" Content="3" HorizontalAlignment="Left" Margin="0,0,0,0"  Click="radioButton1_Click"/>
+                <RadioButton x:Name="radioButton4" Content="4" HorizontalAlignment="Left" Margin="0,0,0,0" Click="radioButton1_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox" Header="Тип размещения" HorizontalAlignment="Left" Margin="353,67,0,0" VerticalAlignment="Top" Height="70" Width="113">
+            <StackPanel>
+                <RadioButton x:Name="radioButtonGor" Content="Горизонтально" HorizontalAlignment="Left" Height="16" Margin="0,10,-34.2,0" VerticalAlignment="Top" Width="135" IsChecked="True" Click="radioButtonGor_Click"/>
+                <RadioButton x:Name="radioButtonVer" Content="Вертикально" HorizontalAlignment="Left" Height="16" Margin="0,0,-11.2,0" VerticalAlignment="Top" Width="112" Click="radioButtonVer_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="buttonStartGame" Content="Начать" HorizontalAlignment="Left" Height="25" Margin="220,356,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Click="buttonStartGame_Click"/>
+        <Button x:Name="buttonClear" Content="Очистить поле" HorizontalAlignment="Left" Height="25" Margin="40,356,0,0" VerticalAlignment="Top" Width="120" Click="buttonClear_Click"/>
+        <local:BattleField x:Name="EnemyField" HorizontalAlignment="Left" Margin="503,55,0,0" VerticalAlignment="Top" />
+        <Label x:Name="labelA2" Content="А" HorizontalAlignment="Left" Margin="503,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelB2" Content="Б" HorizontalAlignment="Left" Margin="533,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelC2" Content="В" HorizontalAlignment="Left" Margin="563,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelD2" Content="Г" HorizontalAlignment="Left" Margin="593,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelE2" Content="Д" HorizontalAlignment="Left" Margin="623,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelF2" Content="Е" HorizontalAlignment="Left" Margin="653,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelG2" Content="Ж" HorizontalAlignment="Left" Margin="683,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelH2" Content="З" HorizontalAlignment="Left" Margin="713,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelI2" Content="И" HorizontalAlignment="Left" Margin="743,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelJ2" Content="К" HorizontalAlignment="Left" Margin="773,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label12" Content="1" HorizontalAlignment="Left" Margin="483,55,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label22" Content="2" HorizontalAlignment="Left" Margin="483,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label32" Content="3" HorizontalAlignment="Left" Margin="483,115,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label42" Content="4" HorizontalAlignment="Left" Margin="483,145,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label52" Content="5" HorizontalAlignment="Left" Margin="483,175,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label62" Content="6" HorizontalAlignment="Left" Margin="483,205,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label72" Content="7" HorizontalAlignment="Left" Margin="483,235,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label82" Content="8" HorizontalAlignment="Left" Margin="483,265,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label92" Content="9" HorizontalAlignment="Left" Margin="483,295,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label102" Content="10" HorizontalAlignment="Left" Margin="483,325,0,0" VerticalAlignment="Top"/>
+        <GroupBox x:Name="groupBox1" Header="Сложность&#xD;&#xA;" HorizontalAlignment="Left" Height="90" Margin="353,265,0,0" VerticalAlignment="Top" Width="113">
+            <StackPanel>
+                <RadioButton x:Name="radioButtonEzLvl" Content="Легкий" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" IsChecked="True" Click="radioButtonEzLvl_Click"/>
+                <RadioButton x:Name="radioButtonHardLvl" Content="Тяжелый" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="radioButtonHardLvl_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="buttonAutoPlacement" Content="Авторастановка" HorizontalAlignment="Left" Height="25" Margin="40,381,0,0" VerticalAlignment="Top" Width="120" Click="buttonAutoPlacement_Click"/>
+        <Button x:Name="buttonNewGame" Content="Новая игра" HorizontalAlignment="Left" Height="25" Margin="220,381,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Click="buttonNewGame_Click"/>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Сохранить" Name="SaveMenuItem" Click="SaveMenuItem_Click"></MenuItem>
+                <MenuItem Header="Загрузить" Name="LoadMenuItem" Click="LoadMenuItem_Click"></MenuItem>
+                <MenuItem Header="Выход" Name="ExitMenuItem" Click="ExitMenuItem_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Статистика" Click="StatisticMenuItem_Click"></MenuItem>
+            
+        </Menu>
+    </Grid>
+</Window>
